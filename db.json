@@ -1,0 +1,78 @@
+{
+
+  "data": [
+    {
+      "name": "Salad",
+      "price": "15",
+      "url": "https://i.postimg.cc/tRNk04kz/salad.jpg",
+      "drname":"Lemon Squash",
+      "drprice":"10",
+      "drurl":"https://i.postimg.cc/63b54MmM/lemonsquash.jpg"
+    },
+    {
+      "name": "Carbonara",
+      "price": "20",
+      "url": "https://i.postimg.cc/y6pJSq8H/carbonara.jpg",
+      "drname":"Strawberry MilkShake",
+      "drprice":"15",
+      "drurl":" https://i.postimg.cc/QNBWk7JF/Smilkshake.jpg"
+    },
+    {
+      "name": "Marry Chicken",
+      "price": "25",
+      "url": " https://i.postimg.cc/QMDVrh0p/marrychick.jpg",
+      "drname":"Choco Avocado",
+      "drprice":"15",
+      "drurl":"https://i.postimg.cc/0rRv7Fd0/chocoavo.jpg"
+    },
+    {
+      "name": "Mac and Cheese",
+      "price": "20",
+      "url": "https://i.postimg.cc/QdmVsvPw/macarony.jpg",
+      "drname":"Mango Juice",
+      "drprice":"10",
+      "drurl":" https://i.postimg.cc/MHjxMqRG/mangojuice.jpg"
+    },
+    {
+      "name": "Pancake",
+      "price": "18",
+      "url": "https://i.postimg.cc/WbRd7GgW/pancake.jpg",
+      "drname":"Melon Squash",
+      "drprice":"10",
+      "drurl":"https://i.postimg.cc/J79HThpP/melonsquash.jpg"
+    },
+    {
+      "name": "Casava Chips",
+      "price": "10",
+      "url": "https://i.postimg.cc/Z540GJf6/casava-chips.jpg",
+      "drname":"Thai Tea",
+      "drprice":"10",
+      "drurl":"https://i.postimg.cc/xdt9Bsn9/thaitea.jpg"
+    },
+    {
+      "name": "Toast",
+      "price": "20",
+      "url": " https://i.postimg.cc/59DCRddm/toast.jpg",
+        "drname":"Lemon Mojito",
+        "drprice":"15",
+        "drurl":"https://i.postimg.cc/htR4mz2R/lemonmojito.jpg"
+    },
+    {
+      "name": "Waffle",
+      "price": "20",
+      "url": "  https://i.postimg.cc/FH4JhyKd/waffle.jpg",
+      "drname":"Boba Tea",
+      "drprice":"10",
+      "drurl":"https://i.postimg.cc/VLCL5BBF/boba.jpg"
+    },
+    {
+      "name": "Omelete",
+      "price": "15",
+      "url": " https://i.postimg.cc/tJn9xMBq/omelete.jpg",
+      "drname":"Ice Code Latte",
+      "drprice":"10",
+      "drurl":"https://i.postimg.cc/wjzVG2wf/ice-cofe-latte.jpg"
+    }
+
+  ]
+}
