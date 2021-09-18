@@ -76,7 +76,9 @@ export default function Food() {
                     image={value.drurl}
                   />
                   <CardContent>
-                  <Typography style={{fontWeight:"bold"}}>{value.drname}</Typography>
+                    <Typography style={{ fontWeight: "bold" }}>
+                      {value.drname}
+                    </Typography>
                     <Typography>Harga : {value.drprice} k</Typography>
                   </CardContent>
                 </CardActionArea>

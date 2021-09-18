@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
-
+import style from "./style.css";
 class Kasir extends React.Component {
-
   constructor(props) {
     super(props);
     this.handleChangeStuff = this.handleChangeStuff.bind(this);
@@ -36,7 +35,7 @@ class Kasir extends React.Component {
   }
 
   handleCalculation = () => {
-    const { menu1, menu2} = this.state.menu;
+    const { menu1, menu2 } = this.state.menu;
     var total = menu1 + menu2;
     this.setState({
       ...this.state.menu,
@@ -65,53 +64,54 @@ class Kasir extends React.Component {
     const { drink, food, totalTagihan } = this.state;
     return (
       <>
-        <div>
-          <div style={{ height: "75%" }}>
-            <div className="cashier-calculator">
-              <div className="sarapan">
-                <h2>Daftar Pesanan</h2>
-                <br />
-                <select
-                  onChange={this.handleChangeStuff}
-                  name="menu1"
-                  style={{ cursor: "pointer" }}
-                >
-                  <option value="0">Makanan</option>
-                  <Fragment>
-                    {food.map((makanan) => {
-                      return <option value={makanan[1]}>{makanan[0]}</option>;
-                    })}
-                  </Fragment>
-                </select>
-                <br />
-                <select
-                  onChange={this.handleChangeStuff}
-                  name="menu2"
-                  style={{ cursor: "pointer" }}
-                >
-                  <option value="0">Minuman</option>
-                  <Fragment>
-                    {drink.map((makanan) => {
-                      return <option value={makanan[1]}>{makanan[0]}</option>;
-                    })}
-                  </Fragment>
-                </select>
-                <br />
-              
-           
-                <h5>Total Belanjaan: Rp {totalTagihan} K</h5>
-              </div>
-              <h2
-                style={{
-                  color: "#6e0234",
-                  textAlign: "center",
-                  flex: "1 0 100%",
-                  margin: "auto",
-                }}
-              >
-                Silakan Bayar: Rp {totalTagihan} K
-              </h2>
-            </div>
+        <div className="body">
+          <h2
+            style={{
+              textAlign: "center",
+              marginTop: "0px",
+              padding: "50px",
+            }}
+          >
+            Daftar Pesanan
+          </h2>
+          <div style={{ marginTop: "150px", marginLeft: "530px" }}>
+            <select
+              onChange={this.handleChangeStuff}
+              name="menu1"
+              style={{
+                cursor: "pointer",
+                width: "200px",
+                padding: "5px",
+              }}
+            >
+              <option value="0">Makanan</option>
+              <Fragment>
+                {food.map((makanan) => {
+                  return <option value={makanan[1]}>{makanan[0]}</option>;
+                })}
+              </Fragment>
+            </select>
+            <h3 style={{ marginTop: "0px", marginLeft: "300px" }}>
+              Total Belanjaan: Rp {totalTagihan} K
+            </h3>
+          </div>
+          <div style={{ marginTop: "200px", marginLeft: "530px" }}>
+            <select
+              onChange={this.handleChangeStuff}
+              name="menu2"
+              style={{
+                cursor: "pointer",
+                width: "200px",
+                padding: "5px",
+              }}
+            >
+              <option value="0">Minuman</option>
+              <Fragment>
+                {drink.map((makanan) => {
+                  return <option value={makanan[1]}>{makanan[0]}</option>;
+                })}
+              </Fragment>
+            </select>
           </div>
         </div>
       </>
