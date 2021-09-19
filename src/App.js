@@ -2,6 +2,8 @@ import { useContext, createContext, useState } from "react";
 import Button from "@material-ui/core/Button";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
 import foodImage from "./images/makanan.jpg";
 import drinkImage from "./images/minuman.jpg";
 
@@ -16,7 +18,7 @@ const styles = makeStyles((theme) => ({
   },
   container: {
     marginTop: "0px",
-  },
+  }
 }));
 const themes = {
   light: {
@@ -47,26 +49,34 @@ export default function Header() {
   const theme = useContext(ThemeContext);
   return (
     <ThemeContext.Provider value={valueTheme}>
+      <div style={{ backgroundColor: valueTheme.background}}>
+        <Grid container spacing={3}>
+          <Grid item md={6} style={{ textAlign:"center" }}>
+            <input
+              onChange={(event) => handleIdPembelian(event, "name")}
+              name="idPembelian"
+              value={valueInput.name}
+              style={{ color: "#6e0234", padding: "5px" }}
+              placeholder="Masukkan Nama"
+            />
+          </Grid>
+          <Grid item md={6} style={{ textAlign:"center" }}>
+            <Button
+              style={{ color: valueTheme.color, fontWeight: "bold" }}
+              className="Button"
+              onClick={() =>
+                setValueTheme(
+                  valueTheme === themes.light ? themes.dark : themes.light
+                )
+              }
+            >
+              change body theme
+            </Button>
+          </Grid>
+        </Grid>
+      </div>
       <div style={{ backgroundColor: valueTheme.background }}>
-        <div className="container">
-          <input
-            onChange={(event) => handleIdPembelian(event, "name")}
-            name="idPembelian"
-            value={valueInput.name}
-            style={{ color: "#6e0234", padding: "5px" }}
-            placeholder="Masukkan Nama"
-          />
-          <Button
-            style={{ color: valueTheme.color, fontWeight: "bold" }}
-            className="Button"
-            onClick={() =>
-              setValueTheme(
-                valueTheme === themes.light ? themes.dark : themes.light
-              )
-            }
-          >
-            change theme
-          </Button>
+        <div className="container">          
           <h3 style={{ color: valueTheme.color, fontWeight: "bold" }}>
             <marquee>Welcome {valueInput.name}</marquee>
           </h3>
